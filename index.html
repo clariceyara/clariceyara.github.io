@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meus objetivos do ano</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Aleatório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #nome {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <section class="conteudo-principal"></section>
-    <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-    <div class="botoes">
-      <button class="botao">Cursos na Alura</button>
-      <button class="botao">Criar projetos em JavaScript</button>
-      <button class="botao">Criar um portfólio</button>
-      <button class="botao">Atualizar meu currículo</button>
-    </div>
-  </section>
+    <h1>Gerador de Nome Aleatório</h1>
+    <button onclick="gerarNome()">Gerar Nome</button>
+    <div id="nome"></div>
 
+    <script>
+        function gerarNome() {
+            const nomes = ["Caio", "Lays", "Dalvan", "Duda", "Aisha" , "Léo", "Vitória", "Luiza", "Nycolly", "Wilian"];
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+            document.getElementById("nome").textContent = nomeAleatorio;
+        }
+    </script>
 </body>
 </html>
